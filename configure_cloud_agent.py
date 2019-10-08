@@ -21,6 +21,6 @@ node_info = {
     "nodeID": "0000000000"
 }
 
-file = open("device.conf", "w")
+file = open("device.config", "w")
 json.dump(node_info, file)
 file.close()
