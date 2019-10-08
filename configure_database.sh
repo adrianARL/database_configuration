@@ -14,5 +14,5 @@ rm seq.json
 wget -O configure_cloud_agent.py http://raw.githubusercontent.com/adrianARL/database_configuration/master/configure_cloud_agent.py
 python3 configure_cloud_agent.py
 mongoimport --db=globalDB --collection=nodes --file=device.config
-mv device.config /etc/agent/
+mv device.config /etc/agent/config/
 rm configure_cloud_agent.py
