@@ -5,7 +5,7 @@ sudo service mongodb start
 my_ip=`hostname -I | awk '{print $1}'`
 
 wget -O service_catalog.json http://raw.githubusercontent.com/adrianARL/database_configuration/master/service_catalog.json
-sed -i -e 's/replace_ip/$my_ip/g' service_catalog.json
+sed -i "s/replace_ip/$my_ip/g" service_catalog.json
 mongoimport --db=globalDB --collection=service_catalog --file=service_catalog.json
 rm service_catalog.json
 
