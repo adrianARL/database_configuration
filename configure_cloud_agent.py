@@ -6,6 +6,7 @@ my_ip = subprocess.getoutput("hostname -I | awk '{print $1}'")
 broadcast_ip = subprocess.getoutput("ip a | grep inet | grep brd | awk '{print $4}'").split('\n')[0]
 
 node_info = {
+    "_id": "0000000000",
     "ipDB": my_ip,
     "portDB": 27017,
     "myIP": my_ip,
